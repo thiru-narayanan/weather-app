@@ -9,7 +9,7 @@ searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   textPara2.textContent='Loading';
-  fetch("http://localhost:3001/weather?address="+InputText.value).then((res) => {
+  fetch("/weather?address="+InputText.value).then((res) => {
     res.json().then((data) => {
         if(data.error){
             console.log(data.error);
