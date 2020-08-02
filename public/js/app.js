@@ -15,10 +15,7 @@ searchForm.addEventListener("submit", (e) => {
             console.log(data.error);
             textPara2.textContent=textPara2.textContent +  " " + data.error;
         }else{
-            console.log(data.temperature);
-            console.log(data.feelslike);
-            console.log(data.forecast);
-            textPara2.textContent=textPara2.textContent +  " " + data.forecast;
+            textPara2.textContent=textPara2.textContent +  " " + data.weather + ' This weather information is for the Location  ' + data.location ;
         }
       
     });

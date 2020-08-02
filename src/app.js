@@ -63,16 +63,14 @@ app.get("/weather", (req, res) => {
       forecast(
         latitude,
         longitude,
-        (error, { temperature, feelslike,forecast } = {}) => {
+        (error, { weather } = {}) => {
           if (error !== undefined) {
             return res.send({ error: error });
           }
 
           res.send({
-            temperature: temperature,
-            feelslike: feelslike,
-            forecast:forecast,
             location: location,
+            weather: weather
           });
         }
       );
